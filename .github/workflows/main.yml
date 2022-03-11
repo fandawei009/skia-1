@@ -89,15 +89,8 @@ jobs:
         $cp -R --parents \
           out/${{ matrix.mode }}-${{ matrix.arch }}/*.$libext \
           include \
-          modules/particles/include/*.h \
-          modules/skottie/include/*.h \
-          modules/skparagraph/include/*.h \
-          modules/skplaintexteditor/include/*.h \
-          modules/skresources/include/*.h \
-          modules/sksg/include/*.h \
-          modules/skshaper/include/*.h \
-          src/core/*.h \
-          src/gpu/gl/*.h \
+          modules/* \
+          src/* \
           third_party/* \
           $dst
     - name: Uploading Artifact
